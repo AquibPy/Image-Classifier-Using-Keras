@@ -1,0 +1,6 @@
+You can also use pretrained model from Keras
+You can download the pretrained model using this and then load in your app.py
+
+from keras.applications.resnet50 import ResNet50
+model = ResNet50(weights='imagenet')
+model.save('models/model_resnet.h5')
