@@ -23,3 +23,13 @@ A pre-trained model is trained on a different task than the task at hand and pro
 Deep Neural networks have a large number of unknown parameters.To find all the unknown parameters would require lots of data (in millions).
 It is very difficult to get such large labelled dataset.Instead we leverage models that have already being trained on very large amounts of data for difficult task with thousands of classes.
 
+
+## Loading the Resnet50 models in Keras
+``` ruby
+from keras.applications.imagenet_utils import preprocess_input, decode_predictions
+from keras.models import load_model
+from keras.preprocessing import image
+from keras.applications.resnet50 import ResNet50
+model = ResNet50(weights=’imagenet’)
+
+```
